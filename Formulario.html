@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>FORMULARIO</h1>
+    <form>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Nombre"><br><br>
+
+        <label for="Apellido">Apellido:</label>
+        <input type="text" id="Apellido" name="Apellido" placeholder="Apellidos"><br><br>
+
+        <label for="identificacion">tipo de identificación:</label><br>
+        <select id="identificacion" name="identificacion">
+            <option value="cc">Cédula de ciudadanía</option>
+            <option value="ti">Tarjeta de identidad</option>
+            <option value="ce">Cédula de extranjería</option>
+            <option value="p">Permiso de permanencia</option>
+        </select><br><br>
+
+        <label for="Numero de identificacion" name="Numero de identificacion">Número de identificación:</label>
+        <input type="text" id="Numero de identificacion" name="Numero de identificacion" placeholder="Su número de identificación"><br><br>
+
+        <label for="Nacimiento">Fecha de Nacimiento:</label>
+        <input type="date" id="Nacimiento" name="Nacimiento"><br><br>
+
+        <label for="number">Numero de celular:</label>
+        <input type="text" id="number" name="number" placeholder="Su número de celular"><br><br>
+    
+        <h4>Tratamiento de datos personales</h4>
+        <a href="https://www.funcionpublica.gov.co/eva/gestornormativo/norma.php?i=49981" target="_blank">Términos y condiciones</a><br>
+        <input type="checkbox" id="tratamiento_datos" name="tratamiento_datos">
+        <label for="tratamiento_datos">Acepto el tratamiento de mis datos personales después de haber leído los terminos y condiciones</label><br><br>
+
+        <input type="submit" value="Enviar">
+    </form>
+    </header>
+</body>
+</html>
