@@ -1,54 +1,122 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="CSS/style.css">
-    <title>Document</title>
+<html lang="es" id="html-doc">
+<head id="head-doc">
+    <meta charset="UTF-8" id="meta-charset">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" id="meta-viewport">
+    <title id="titulo-pagina">Formulario</title>
+    <link rel="stylesheet" href="CSS/style.css" id="estilos-css">
 </head>
-<body>
-    <header>
-        <h1>FORMULARIO</h1>
-    <form>
-        <label for="nombre">Nombre:</label>
-        <input type="text" id="nombre" name="nombre" placeholder="Nombre"><br><br>
+<body id="cuerpo-pagina">
+    <div>
+        <header id="cabecera-principal">
+            <h1 id="titulo-principal">FORMULARIO</h1>
+        </header>
+    </div>
 
-        <label for="Apellido">Apellido:</label>
-        <input type="text" id="Apellido" name="Apellido" placeholder="Apellidos"><br><br>
+    <main id="contenido-principal">
+        <div>
+            <form id="formulario-registro" action="#" method="POST">
+            
+                <div id="grupo-nombre" class="form-group">
+                    <label id="label-nombre" for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
+                </div>
 
-        <label for="identificacion">tipo de identificación:</label><br>
-        <select id="identificacion" name="identificacion">
-            <option value="cc">Cédula de ciudadanía</option>
-            <option value="ti">Tarjeta de identidad</option>
-            <option value="ce">Cédula de extranjería</option>
-            <option value="p">Permiso de permanencia</option>
-        </select><br><br>
+                <div id="grupo-apellido" class="form-group">
+                    <label id="label-apellido" for="apellido">Apellido:</label>
+                    <input type="text" id="apellido" name="apellido" placeholder="Apellidos" required>
+                </div>
 
-        <label for="Numero de identificacion" name="Numero de identificacion">Número de identificación:</label>
-        <input type="text" id="Numero de identificacion" name="Numero de identificacion" placeholder="Su número de identificación"><br><br>
+                <div id="grupo-tipo-identificacion" class="form-group">
+                    <label id="label-tipo-identificacion" for="tipo_identificacion">Tipo de identificación:</label>
+                    <select id="tipo_identificacion" name="tipo_identificacion" required>
+                        <option value="" disabled selected>Seleccione...</option>
+                        <option id="opcion-cc" value="13">Cédula de ciudadanía</option>
+                        <option id="opcion-ti" value="12">Tarjeta de identidad</option>
+                        <option id="opcion-ce" value="21">Cédula de extranjería</option>
+                        <option id="opcion-pe" value="41">Pasaporte</option>
+                    </select>
+                </div>
 
-        <label for="Nacimiento">Fecha de Nacimiento:</label>
-        <input type="date" id="Nacimiento" name="Nacimiento"><br><br>
+                <div id="grupo-num-identificacion" class="form-group">
+                    <label id="label-num-identificacion" for="numero_identificacion">Número de identificación:</label>
+                    <input type="text" id="numero_identificacion" name="numero_identificacion" placeholder="Su número de identificación" required>
+                </div>
 
-        <label for="number">Número de Celular:</label>
-        <input type="text" id="number" name="number" placeholder="Su número de celular"><br><br>
-    
-        <label for="Correo Electronico">Correo Electronico</label>
-        <input type="text" id="Correo Electronico" name="Correo Electronico" placeholder="Su Correo Electronico"><br><br>
+                <div id="grupo-nacimiento" class="form-group">
+                    <label id="label-nacimiento" for="nacimiento">Fecha de Nacimiento:</label>
+                    <input type="date" id="nacimiento" name="nacimiento" required>
+                </div>
 
-        <label for="Pais de Residencia">Pais de Residencia</label>
-        <input type="text" id="Pais de Residencia" name="Pais de Residencia" placeholder="Su Pais de Residencia"><br><br>
+                <div id="grupo-celular" class="form-group">
+                    <label id="label-celular" for="celular">Número de celular:</label>
+                    <input type="tel" id="celular" name="celular" placeholder="Su número de celular" required>
+                </div>
 
-        <label for="Ciudad de Domicilio">Ciudad de Domicilio</label>
-        <input type="text" id="Ciudad de Domicilio" name="Ciudad de Domicilio" placeholder="Su Ciudad de Domicilio"><br><br>
+                <div id="grupo-correo" class="form-group">
+                    <label id="label-correo" for="correo">Correo electrónico:</label>
+                    <input type="email" id="correo" name="correo" placeholder="Su correo electrónico" required>
+                </div>
 
-        <h4>Tratamiento de datos personales</h4>
-        <a href="https://www.funcionpublica.gov.co/eva/gestornormativo/norma.php?i=49981" target="_blank">Términos y condiciones</a><br>
-        <input type="checkbox" id="tratamiento_datos" name="tratamiento_datos">
-        <label for="tratamiento_datos">Acepto el tratamiento de mis datos personales después de haber leído los terminos y condiciones</label><br><br>
+                <div id="grupo-pais" class="form-group">
+                    <label id="label-pais" for="pais">País de domicilio:</label>
+                    <select id="pais" name="pais" required>
+                        <option value="1" disabled>Seleccione un país...</option>
+                        <option value="169" selected>Colombia</option>
+                        <option value="249">Estados Unidos</option>
+                        <option value="245">España</option>
+                    </select>
+                </div>
 
-        <input type="submit" value="Enviar">
-    </form>
-    </header>
+                <div id="grupo-ciudad" class="form-group">
+                    <label id="label-ciudad" for="ciudad">Ciudad de domicilio:</label>
+                    <select id="ciudad" name="ciudad" required>
+                        <option value="1" disabled selected>Seleccione una ciudad...</option>
+                        
+                        <optgroup label="Colombia">
+                            <option value="11001">Bogotá, D.C.</option>
+                            <option value="05001">Medellín</option>
+                            <option value="76001">Cali</option>
+                            <option value="08001">Barranquilla</option>
+                            <option value="13001">Cartagena</option>
+                        </optgroup>
+                        
+                        <optgroup label="Estados Unidos">
+                            <option value="US-NY">Nueva York</option>
+                            <option value="US-MI">Miami</option>
+                            <option value="US-LA">Los Ángeles</option>
+                            <option value="US-CH">Chicago</option>
+                            <option value="US-HO">Houston</option>
+                        </optgroup>
+
+                        <optgroup label="España">
+                            <option value="ES-MA">Madrid</option>
+                            <option value="ES-BA">Barcelona</option>
+                            <option value="ES-VA">Valencia</option>
+                            <option value="ES-SE">Sevilla</option>
+                            <option value="ES-BI">Bilbao</option>
+                        </optgroup>
+                    </select>
+                </div>
+        
+                <div id="grupo-tratamiento-datos" class="form-group">
+                    <h4 id="titulo-tratamiento">Tratamiento de datos personales</h4>
+                    <a id="enlace-terminos" href="https://www.funcionpublica.gov.co/eva/gestornormativo/norma.php?i=49981" target="_blank">Términos y condiciones</a>
+                
+                    <div id="grupo-checkbox">
+                        <input type="checkbox" id="tratamiento_datos" name="tratamiento_datos" required>
+                        <label id="label-tratamiento" for="tratamiento_datos">Acepto el tratamiento de mis datos personales después de haber leído los términos y condiciones</label>
+                    </div>
+                </div>
+
+                <div id="grupo-boton-enviar" class="form-group">
+                    <button type="button">Enviar</button>
+                </div>
+
+            </form>
+        </div>
+        
+    </main>
+
 </body>
 </html>
