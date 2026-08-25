@@ -36,12 +36,12 @@ formulario.addEventListener('submit', function(event) {
     const ciudad = document.getElementById('ciudad').value;
     const datos = document.getElementById('tratamiento_datos').value;
 
-    const crearUduario = crearUsuario(nombre, apellido, identificacion, numero_identificacion, nac, calu, correo, pais, ciudad, datos);
+    const CrearUsuario= crearUsuario(nombre, apellido, identificacion, numero_identificacion, nac, calu, correo, pais, ciudad, datos);
     console.log('Registro Creado')
 
-    const usuarioJSON = JSON.stringify(crearUduario)
+    const usuarioJSON = JSON.stringify(CrearUsuario)
 
 
-    localStorage.setItem('usuarioCreado1', usuarioJSON)
+    localStorage.setItem(CrearUsuario.id, usuarioJSON)
 
 })
